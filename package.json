@@ -1,7 +1,6 @@
 {
   "name": "get-all-folders",
   "version": "1.0.0",
-  "description": "",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
@@ -40,5 +39,15 @@
   },
   "dependencies": {
     "glob": "^8.0.3"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adrienoak/get-all-folders.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/adrienoak/get-all-folders/issues"
+  },
+  "homepage": "https://github.com/adrienoak/get-all-folders#readme",
+  "description": ""
 }
