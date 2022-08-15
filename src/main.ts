@@ -6,11 +6,17 @@ type Options = Pick<IOptions, "dot">;
 type Args = Options & {
   /**
    * If not defined, will default to the cwd
+   * @default process.cwd()
    */
   basePath?: string;
   seperator?: Seperator;
 };
 
+/**
+ *
+ * If no basepath is passed into this function, the current working directory will be assigned
+ * @returns Promise<string[]>
+ */
 export function getAllFolders(args: Args = {}): Promise<string[]> {
   const { basePath, dot } = args;
 
@@ -29,6 +35,11 @@ export function getAllFolders(args: Args = {}): Promise<string[]> {
   });
 }
 
+/**
+ *
+ * If no basepath is passed into this function, the current working directory will be assigned
+ * @returns string[]
+ */
 export function getAllFoldersSync(args: Args = {}): string[] {
   const { basePath, dot } = args;
   const path = basePath || process.cwd();
